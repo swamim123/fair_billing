@@ -48,7 +48,6 @@ def parse_log_file(log_files, users):
                         user_sessions[log_user].append((earliest_time, timestamp))
 
     for user, sessions in user_sessions.items():
-        print(sessions)
         for i, (start, end) in enumerate(sessions):
             if start is None:
                 sessions[i] = (earliest_time, sessions[i][1])
